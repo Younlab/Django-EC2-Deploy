@@ -9,7 +9,7 @@ SERVER_DIR="/home/ubuntu/project"
 CMD_CONNECT="ssh -i ${IDENTITY_FILE} ${USER}@${HOST}"
 
 # 켜져있는 runserver 종료
-${CMD_CONNECT}"pkill -9 -ef runserver"
+${CMD_CONNECT} "pkill -9 -ef runserver"
 echo "-kill runserver processes"
 
 # 서버의 파일 지움

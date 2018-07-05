@@ -13,10 +13,9 @@
     <title>Document</title>
 </head>
 <body>
-<header class="uk-nav-header">
+<header class="">
     <nav class="uk-navbar-container" uk-navbar>
         <div class="uk-navbar-left">
-
             <ul class="uk-navbar-nav">
                 <li class="uk-active"><a href="#">Django</a></li>
                 <li>
@@ -34,13 +33,29 @@
         </div>
     </nav>
 </header>
-<section>
     <div class="uk-height-large uk-background-cover uk-light uk-flex" uk-parallax="bgy: -200" style="background-image: url('{% static 'source/bg_forest.jpg' %}');">
 
         <h1 class="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical">EC2 Deploy</h1>
 
     </div>
+<section class="uk-container uk-container-small">
 
+<div class="uk-child-width-1-2@s uk-margin-top" uk-grid>
+    <div>
+        <div class="uk-light uk-background-secondary uk-padding">
+            <h3>Light</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <button class="uk-button uk-button-default">Button</button>
+        </div>
+    </div>
+    <div>
+        <div class="uk-dark uk-background-muted uk-padding">
+            <h3>Dark</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <button class="uk-button uk-button-default">Button</button>
+        </div>
+    </div>
+</div>
 </section>
 
 </body>
