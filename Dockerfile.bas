@@ -42,5 +42,6 @@ RUN             apt -y install vim
 # Copy project files
 RUN             mkdir /srv/project
 COPY            ./Pipfile   /srv/project
+#COPY            .           /srv/project
 WORKDIR         /srv/project
-RUN             pipenv install --skip-lock
+RUN             pipenv install
