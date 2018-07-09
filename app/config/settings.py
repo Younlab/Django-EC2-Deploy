@@ -18,9 +18,9 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 STATIC_DIR = os.path.join(BASE_DIR, 'static')
 ROOT_DIR = os.path.dirname(BASE_DIR)
 STATIC_ROOT = os.path.join(ROOT_DIR, '.static')
+MEDIA_ROOT = os.path.join(ROOT_DIR, '.media')
 STATICFILES_DIRS = [
     STATIC_DIR,
-    STATIC_ROOT,
 ]
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
@@ -37,10 +37,11 @@ ALLOWED_HOSTS = [
     '127.0.0.1',
 ]
 
-
+AUTH_USER_MODEL = 'members.User'
 # Application definition
 
 INSTALLED_APPS = [
+    'members.apps.MembersConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -130,3 +131,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
+MEDIA_URL = '/media/'
