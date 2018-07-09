@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/2.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.0/ref/settings/
 """
-
+import json
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -26,8 +26,13 @@ STATICFILES_DIRS = [
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '+n7z2rsc&*h_i@i!)$qi&0g-+gzxjtq8%ucey#4kmm*yx@m2sb'
+SECRET_KEY_ROOT = os.path.join(ROOT_DIR, '.secrets')
 
+SECRET_KEY_ROOT_FILES = os.path.join(SECRET_KEY_ROOT, 'base.json')
+
+FILE = open(SECRET_KEY_ROOT_FILES, 'rt').read()
+
+SECRET_KEY = json.loads(FILE)
 
 
 AUTH_USER_MODEL = 'members.User'
@@ -41,6 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_extensions',
 ]
 
 MIDDLEWARE = [
