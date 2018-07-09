@@ -23,9 +23,9 @@ RUN             echo 'eval "$(pyenv virtualenv-init -)"'>>~/.zshrc
 
 # python install
 ENV             PATH /root/.pyenv/bin:$PATH
+RUN             pyenv install 3.6.5
 RUN             eval "$(pyenv init -)"
 RUN             eval "$(pyenv virtualenv-init -)"
-RUN             pyenv install 3.6.5
 
 # pipenv install
 RUN             apt -y install software-properties-common python-software-properties
