@@ -20,12 +20,6 @@ DATABASES = {
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [
-    'localhost',
-    '.amazonaws.com',
-    '127.0.0.1',
-]
-
 # uWSGI
 WSGI_APPLICATION = 'config.wsgi.application'
 
